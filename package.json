@@ -1,0 +1,10 @@
+{
+  "name": "ada-research",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Emanuel Tesar",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^5.0.32"
+  }
+}

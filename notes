@@ -1,0 +1,31 @@
+BINANCE SMART CHAIN RESEARCH:
+- many wallets (metamask, truste wallet, binance chain wallet...)
+  - metamask integration = https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain
+  - fund testnet account = https://academy.binance.com/en/articles/binance-dex-funding-your-testnet-account
+- Binance Smart Chain (BSC) = BEP-20 standard, Binance Chain (BNB) = BEP-2 standard
+  - BEP = binance evolution proposal (similar to EIP for ethereum)
+  - there exists a bridge between BSC and BNB to swap assets = https://docs.binance.org/smart-chain/guides/panama.html
+  - add money to BSC using binance account or binance brigde
+- example apps:
+  - PancakeSwap = automatic money maker + token swapper
+  - Venus = borrow-lending protocol
+  - Autofarm = tries to find best way to earn a yield on your deposits
+- https://bscscan.com/ = etherscan for BSC, also provides web API (free, but limited)
+- Binance chain = ultra fast trading, bad programatic experience, BSC - better programatic exp.
+- BNB launched april 2019
+- BSC = EVM based, seamless transfer for BNB
+- docs = https://docs.binance.org/smart-chain/guides/bsc-intro.html
+  - ecosystem = https://github.com/binance-chain/bsc-ecosystem
+  - compatible with ETH tools = https://docs.binance.org/smart-chain/guides/concepts/consensus.html
+
+QUESTIONS:
+- What is BSC exactly? = its a POSA (proof of stake authority) EVM based chain = short block length + low fees
+- what is binance? = different blockchain, not EVM based
+- difference between BSC and BNB? = BNB not EVM compatible, low (or none?) smart contract support, BSC = EVM based, compatible with EVM tooling
+
+
+OTHER NOTES:
+- AMM = decentralized exchange, using math formula to price assets
+- Binance chain urls:
+  - API = https://docs.binance.org/api-reference/dex-api/ws-connection.html
+  - SDK = https://github.com/binance-chain/javascript-sdk
