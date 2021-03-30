@@ -2,7 +2,8 @@ BINANCE SMART CHAIN RESEARCH:
 - many wallets (metamask, truste wallet, binance chain wallet...)
   - metamask integration = https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain
   - fund testnet account = https://academy.binance.com/en/articles/binance-dex-funding-your-testnet-account
-- Binance Smart Chain (BSC) = BEP-20 standard, Binance Chain (BNB) = BEP-2 standard
+- Binance Smart Chain (BSC) = BEP-20 standard, Binance Chain (BC) = BEP-2 standard
+  - same native currency BNB
   - BEP = binance evolution proposal (similar to EIP for ethereum)
   - there exists a bridge between BSC and BNB to swap assets = https://docs.binance.org/smart-chain/guides/panama.html
   - add money to BSC using binance account or binance brigde
@@ -29,3 +30,27 @@ OTHER NOTES:
 - Binance chain urls:
   - API = https://docs.binance.org/api-reference/dex-api/ws-connection.html
   - SDK = https://github.com/binance-chain/javascript-sdk
+
+STAKING:
+- Staking for BSC using BC chain
+- only 21 validators
+  - minimum 10000 BNB = 2,800,000 USD (https://paybis.com/bnb-to-usd/10000/)
+- can stake by delegation (https://docs.binance.org/faq/bsc/del.html)
+  - minimum 1 BNB
+  - receive rewards nearly every day
+  - staking is safe even when the validator is slashed
+  - https://docs.binance.org/guides/concepts/bc-staking.html TODO:
+    - BC supports staking so they used it for BSC
+    - validator changes on BC are propagetd to BSC every day
+    - staking rewards happen on BSC and is transfered back to BC every day
+    - there are technical examples for delegation/staking using their CLI
+  - where to connect? https://docs.binance.org/api-reference/cli.html
+    - you download the CLI and connect to one of the BSC nodes
+    - side chain id is "bsc" for mainnet, "chapel" for testnet
+  - https://docs.binance.org/smart-chain/delegator/del-guide.html#delegate-with-binance-chain-command-line
+    - list current validators and choose the one to support (https://testnet-dex.binance.org/api/v1/peers)
+    - create a binance account - there is a link above, but didn't work
+      - didn't work as well: https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain
+      - I ended up with this: https://docs.binance.org/smart-chain/wallet/binance.html#binance.html#transfer-testnet-bnb-from-bsc-to-bc
+      - tesnet for binance: https://testnet-explorer.binance.org/
+  - https://www.binance.org/en/staking#

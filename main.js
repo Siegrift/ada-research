@@ -6,6 +6,8 @@ try {
   process.exit(0)
 }
 const assert = require('assert')
+const { promisify } = require('util');
+const exec = promisify(require('child_process').exec)
 
 const sender = "0xb0A20975f540656E331e2331C6caEc608Ff254fc"
 const senderPrivateKey = "0508d5f96e139a0c18ee97a92d890c55707c77b90916395ff7849efafffbd810"
@@ -61,9 +63,40 @@ const ethereumTest = async () => {
   return Promise.resolve()
 }
 
+const binanceSmartChainStakingTest = async () => {
+  // the node was one the listed peers in https://testnet-dex.binance.org/api/v1/peers. See notes or binance staking docs for more info.
+  const topValidatorsCommand = './tbnbcli staking side-top-validators --top 3 --side-chain-id=chapel --chain-id=Binance-Chain-Ganges --node=https://data-seed-pre-0-s1.binance.org:443'
+  const validators = (await exec(topValidatorsCommand)).stdout
+
+  // this just parses the validator address from the response.
+  // Do not pay much attention to the (boring) parsing logic.
+  const validatorAddr = validators.split('\n\n')[0]
+    .split('\n')
+    .slice(1)
+    .reduce((acc, x) => {
+      const [k, v] = x.split(':')
+      acc[k.trim()] = v.trim()
+      return acc
+    }, {})
+    ['Operator Address']
+
+  // this key should be created per instructions in README
+  const from = 'test_key'
+  const password = 'password'
+
+  const amount = 100000000 // = 1 BNB, which is minimum
+  const delegateComamnd = `echo ${password} | ./tbnbcli staking bsc-delegate --chain-id Binance-Chain-Ganges --side-chain-id chapel --from ${from} --node https://data-seed-pre-0-s1.binance.org:443 --validator ${validatorAddr} --amount ${amount}:BNB --home .`
+
+  // inspect the transaction on testnet explorer
+  // e.g. https://testnet-explorer.binance.org/tx/D17AF10685ADE92ABF1CC59C19F45D0A09C6EAA852368C08E6D06BCCF730EBCB
+  // (use 'tx hash' from the console output)
+  console.log((await exec(delegateComamnd)).stdout)
+}
+
 const main = async () => {
   await binanceSmartChainTest()
   await ethereumTest()
+  await binanceSmartChainStakingTest()
 }
 
 main()
