@@ -31,7 +31,7 @@ OTHER NOTES:
   - API = https://docs.binance.org/api-reference/dex-api/ws-connection.html
   - SDK = https://github.com/binance-chain/javascript-sdk
 
-STAKING:
+BSC STAKING:
 - Staking for BSC using BC chain
 - only 21 validators
   - minimum 10000 BNB = 2,800,000 USD (https://paybis.com/bnb-to-usd/10000/)
@@ -57,3 +57,20 @@ STAKING:
   - staking peers
     - mainnet: https://www.binance.org/en/staking#
     - testnet: https://testnet-staking.binance.org/en/staking
+
+ETHEREUM 2.0 STAKING:
+- minimum 32 ETH, otherwise pool staking
+- https://ethereum.org/en/eth2/staking/#stake
+- validator leaderboard: https://beaconcha.in/validators/leaderboard
+- staking possible now: https://www.dapp.com/article/ethereum2-0-staking-eth?utm_source=md
+  - anyone can stake, but withdrawals possible after phase 1.5 (around 2022), https://www.theblockcrypto.com/linked/94442/over-3-million-eth-worth-5-billion-staked-eth2-contract
+- many services that you can stake with:
+  - non custodial: https://www.bloxstaking.com/blog/product-updates/beta-staking-beta-is-ready-for-download/
+  - binance (but cannot withdraw): https://www.binance.com/en/eth2
+  - and many other: https://stakingether.com/, https://blog.shrimpy.io/blog/the-best-ethereum-20-staking-pools
+    - majority agrees that the best one is: http://rocketpool.net/ 
+- nice video: https://www.youtube.com/watch?v=gq3LhxkDwfY
+  - examples how to create staking pool
+- special staking contract: https://etherscan.io/address/0x00000000219ab540356cbb839cbe05303d7705fa
+  - you can also see implementation there
+- good staking FAQ: https://launchpad.ethereum.org/en/faq
