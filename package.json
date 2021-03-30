@@ -5,6 +5,8 @@
   "author": "Emanuel Tesar",
   "license": "MIT",
   "dependencies": {
-    "ethers": "^5.0.32"
+    "@binance-chain/javascript-sdk": "^4.1.1",
+    "ethers": "^5.0.32",
+    "node-fetch": "^2.6.1"
   }
 }
