@@ -46,6 +46,7 @@ BSC STAKING:
     - there are technical examples for delegation/staking using their CLI
   - where to connect? https://docs.binance.org/api-reference/cli.html
     - you download the CLI and connect to one of the BSC nodes
+    - or you can use SDKs for programming languages (js, python...)
     - side chain id is "bsc" for mainnet, "chapel" for testnet
     - select node (one of https://testnet-dex.binance.org/api/v1/peers)
   - https://docs.binance.org/smart-chain/delegator/del-guide.html#delegate-with-binance-chain-command-line
